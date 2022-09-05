@@ -58,6 +58,12 @@ class Word extends React.Component{
     
     
   }
+  
+  handleEnter(e){
+    if (e.key === 'Enter'){
+      this.handleSubmit();
+    }
+  }
     
   render(){
     const w = this.state.word;
@@ -67,7 +73,7 @@ class Word extends React.Component{
         <Stack sx={{py: 10, bgcolor:'#9ea9b1'}} justifyContent="center" alignItems="center" spacing={2}>
           <h1 className='text'>Enter Word</h1>
           <form>
-          <TextField sx={{borderColor: 'black'}}type="text" id="word" name="word" autoComplete='off' value={this.state.word} onChange={this.handlerChange}></TextField>
+          <TextField sx={{borderColor: 'black'}}type="text" id="word" name="word" autoComplete='off' value={this.state.word} onChange={this.handlerChange} onKeyDown={this.handleEnter}></TextField>
           </form>
           <Button onClick={this.handleSubmit} variant="contained" size='large'>BEGIN</Button>
         </Stack>
@@ -167,7 +173,9 @@ function Start(props){
             <hr></hr>
             <form>
               <input type="text" id="word" name="word" maxLength={1} autoComplete='off' value={letter} onChange={(e) => setLetter(e.target.value)}
-              placeholder='Enter a letter' className='answerForm'></input>
+              placeholder='Enter a letter' className='answerForm' onKeyDown={(e) => {if (e.key === 'Enter')
+              { e.preventDefault();
+                check()}}}></input>
             </form>
             <Button onClick={check} color='success' variant="contained" endIcon={<SendIcon />}>
               Submit

@@ -5,9 +5,73 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('foolscap.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.text{
+  text-align: center;
+  font-family: cursive;
+}
+
+.ply{
+  width: 320px;
+  padding: 100px;
+  border: 5px groove gray;
+  margin: auto;
+  display: flex;
+  justify-content: center;  
+  
+  
+}
+
+.playButton{
+  margin-left: 140px;
+}
+
+.w{
+  color: white;
+  font-size: 300%;
+  text-align: center;
+}
+
+.blankSpace{
+  margin-left: 700px;
+  font-size: 2000;
+  margin-top: 70px;
+  font-family: cursive;
+  
+
+}
+
+.Appbar{
+  color:gray;
+}
+
+.gamepage{
+  border: 1px;
+  border-color: white;
+  border-bottom: 10px;
+}
+
+.endpage{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+}
+
+.usedLetter{
+  font-family: cursive;
+}
+
+.answerForm{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+
 }
